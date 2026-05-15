@@ -3,7 +3,7 @@ import { Button } from "../ui/button";
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center pt-24 overflow-hidden bg-background">
+    <section className="relative min-h-screen flex items-center pt-24 overflow-hidden">
       
       {/* Background */}
       <div className="absolute top-20 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" /> 
