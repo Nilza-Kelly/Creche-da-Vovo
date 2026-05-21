@@ -85,23 +85,42 @@ export function AtividadesSection() {
           onMouseEnter={() => setIsAutoPlaying(false)}
           onMouseLeave={() => setIsAutoPlaying(true)}
         >
-          {/* Carousel container */}
-          <div className="overflow-hidden rounded-2xl bg-card border border-border shadow-lg">
+
+        {/* Carousel container */}
+          <div className="overflow-hidden rounded-3xl bg-card border border-border shadow-xl">
             <div
               className="flex transition-transform duration-500 ease-out"
               style={{ transform: `translateX(-${current * 100}%)` }}
             >
               {atividades.map((a) => (
-                <div key={a.name} className="w-full flex-shrink-0 p-8 md:p-12 text-center">
-                  {/* Image placeholder */}
-                  <div className="w-16 h-16 rounded-full bg-primary/10 mx-auto mb-4 flex items-center justify-center">
-                    <img src={a.image} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+                <div
+                  key={a.name}
+                  className="w-full flex-shrink-0 grid md:grid-cols-2"
+                >
+                  {/* IMAGEM */}
+                  <div className="relative w-full h-[260px] md:h-[500px] overflow-hidden bg-muted rounded-t-3xl md:rounded-none">
+                    <img
+                      src={a.image}
+                      alt={a.name}
+                      className="absolute inset-0 w-full h-full object-cover object-center"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/5 to-transparent" />
                   </div>
-                  <blockquote className="text-lg md:text-xl text-foreground italic leading-relaxed mb-6">
-                    {a.quote}
-                  </blockquote>
-                  <p className="font-semibold text-foreground">{a.name}</p>
-                  {/*<p className="text-sm text-muted-foreground">{a.condition}</p>*/}
+
+                  {/* CONTEÚDO */}
+                  <div className="p-8 md:p-12 flex flex-col justify-center text-left">
+                    <span className="text-primary font-semibold uppercase tracking-wider text-sm mb-3">
+                      Projeto Social
+                    </span>
+
+                    <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-5 leading-tight">
+                      {a.name}
+                    </h3>
+
+                    <blockquote className="text-muted-foreground text-lg leading-relaxed">
+                      {a.quote}
+                    </blockquote>
+                  </div>
                 </div>
               ))}
             </div>

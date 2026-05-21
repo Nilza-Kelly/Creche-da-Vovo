@@ -68,13 +68,17 @@ export function Footer() {
             <h4 className="font-semibold text-background mb-4">Contato</h4>
             <ul className="space-y-2 text-background/70">
               <li>
-                <a href="tel:+5500000000000" className="hover:text-background transition-colors">
-                  (00) 00000-0000
+                <a href="tel:+5588988037137" className="hover:text-background transition-colors">
+                  (88) 9.8803-7137
+                </a>
+                <br />
+                <a href="tel:+558899962-2685" className="hover:text-background transition-colors">
+                  (88) 9.99962-2685
                 </a>
               </li>
               <li>
-                <a href="mailto:" className="hover:text-background transition-colors">
-                  ??
+                <a href="mailto:institutoservosdesaoperegrino@gmail .com" className="hover:text-background transition-colors">
+                  institutoservosdesaoperegrino@gmail .com
                 </a>
               </li>
             </ul>
